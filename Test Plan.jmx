@@ -30,7 +30,27 @@
           </elementProp>
           <elementProp name="loopCount" elementType="Argument">
             <stringProp name="Argument.name">loopCount</stringProp>
-            <stringProp name="Argument.value">10</stringProp>
+            <stringProp name="Argument.value">100</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="drink0" elementType="Argument">
+            <stringProp name="Argument.name">drink0</stringProp>
+            <stringProp name="Argument.value">beer</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="drink1" elementType="Argument">
+            <stringProp name="Argument.name">drink1</stringProp>
+            <stringProp name="Argument.value">wine</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="drink2" elementType="Argument">
+            <stringProp name="Argument.name">drink2</stringProp>
+            <stringProp name="Argument.value">cider</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="drink3" elementType="Argument">
+            <stringProp name="Argument.name">drink3</stringProp>
+            <stringProp name="Argument.value">mead</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
         </collectionProp>
@@ -92,15 +112,19 @@ var count=vars.get(&quot;count&quot;);
 var bottles=99-count;
 vars.put(&quot;bottles&quot;,bottles);
 
-
 // Calculate drink
 var random=new Packages.java.util.Random();
-var number = random.nextInt(5);
-vars.put(&quot;drink&quot;, number);
+var number = random.nextInt(4);
+var drink = vars.get(&quot;drink&quot;+number);
+vars.put(&quot;drink&quot;, drink);
 
 // Calculate date
 var date=new Packages.java.util.Date().getTime();
-vars.put(&quot;date&quot;,date);</stringProp>
+vars.put(&quot;date&quot;,date);
+
+// Calculate thread
+var thread=ctx.getThreadNum();
+vars.put(&quot;thread&quot;,thread);</stringProp>
               <stringProp name="scriptLanguage">javascript</stringProp>
             </BSFPreProcessor>
             <hashTree/>
@@ -112,6 +136,15 @@ vars.put(&quot;date&quot;,date);</stringProp>
               <stringProp name="CounterConfig.format"></stringProp>
               <boolProp name="CounterConfig.per_user">true</boolProp>
             </CounterConfig>
+            <hashTree/>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">application/json</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
             <hashTree/>
           </hashTree>
         </hashTree>
