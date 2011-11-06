@@ -81,7 +81,7 @@
               <collectionProp name="Arguments.arguments">
                 <elementProp name="" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                  <stringProp name="Argument.value">{&quot;drink&quot;:&quot;${drink}&quot;, &quot;bottles&quot;:&quot;${bottles}&quot;, &quot;date&quot;:&quot;${date}&quot;}</stringProp>
+                  <stringProp name="Argument.value">{&quot;drink&quot;:&quot;${drink}&quot;, &quot;bottles&quot;:&quot;${bottles}&quot;, &quot;date&quot;:&quot;${date}&quot;, &quot;thread&quot;:&quot;${thread}&quot;}</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                   <boolProp name="HTTPArgument.use_equals">true</boolProp>
                 </elementProp>

@@ -1,5 +1,4 @@
 Paste==1.7.5.1
 bottle==0.9.6
-inflect==0.2.1
 simplejson==2.2.1
 wsgiref==0.1.2

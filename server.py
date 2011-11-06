@@ -2,10 +2,8 @@
 
 import bottle
 import simplejson
-import inflect
 
 bottle.debug(True)
-p=inflect.engine()
 
 @bottle.post('/bottle')
 def store_bottle():
@@ -17,7 +15,7 @@ def store_bottle():
                                             parsed_json['date'], parsed_json['thread'])
     
     # Print the "99 Bottles" song to the console. Correctly pluralise "bottle".
-    plural_bottles=p.plural("bottle",num_bottles)
+    plural_bottles = "bottle" if (int(num_bottles)==1) else "bottles"
     print("%s %s of %s on the wall. Date=%s Thread=%s" % (num_bottles, plural_bottles, \
                                                                 drink, date, thread))
     return "Cheers!"
