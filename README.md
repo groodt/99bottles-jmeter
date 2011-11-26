@@ -1,3 +1,4 @@
+Code from the [Mind Candy tech blog post](http://tech.mindcandy.com/2011/11/99-bottles-of-jmeter-on-the-wall/) describing JMeter scripting.
 
 # Setup
 * Make sure you have JMeter installed. This example works with JMeter 2.5.
